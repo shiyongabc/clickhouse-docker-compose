@@ -6,7 +6,8 @@ services:
      - "8123:8123"
      - "9000:9000"
      - "9009:9009"
-     
+     volumns:
+       - "./config/users.xml:/etc/clickhouse-server/users.xml:ro"
      ulimits:
       nproc: 65535
       nofile:
